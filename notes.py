@@ -9,7 +9,7 @@ class notes():
     countList=[]
     searchingTags=[]
     color=["#FFCCCC","#00CCCC","#CC0000","#00994C","#994C00","#A0A0A0"]
-    tags_types="Software","Cloud Native, AWS","Science","Technology","Python, ML, Data Science","Others"
+    tags_types="Tag","Tag","Tag","Tag","Tag","Tag"
 
     def __init__(self):
         pass
