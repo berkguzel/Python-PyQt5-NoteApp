@@ -31,7 +31,7 @@ class myApp(QtWidgets.QMainWindow):
         self.loadArticles()
 
     def loadUnreadTags(self):
-        myclient= pymongo.MongoClient("mongodb+srv://berkguzel:yxp6x9kqwvFxAsbn@cluster0-feifa.mongodb.net/test?retryWrites=true&w=majority")
+        myclient= pymongo.MongoClient("mongo db url ")
         mydb=myclient["notes-py"]
         mycollection=mydb["notes"]
         mycollection1=mydb["tags"]
@@ -41,7 +41,7 @@ class myApp(QtWidgets.QMainWindow):
 
 
     def reset(self):
-        myclient= pymongo.MongoClient("mongodb+srv://berkguzel:yxp6x9kqwvFxAsbn@cluster0-feifa.mongodb.net/test?retryWrites=true&w=majority")
+        myclient= pymongo.MongoClient("mongo db url")
         mydb=myclient["notes-py"]
         mycollection1=mydb["tags"]
         
@@ -54,7 +54,7 @@ class myApp(QtWidgets.QMainWindow):
         newArticle.analysis()
 
     def markasRead(self):
-        myclient= pymongo.MongoClient("mongodb+srv://berkguzel:yxp6x9kqwvFxAsbn@cluster0-feifa.mongodb.net/test?retryWrites=true&w=majority")
+        myclient= pymongo.MongoClient("mongo db url")
         mydb=myclient["notes-py"]
         mycollection=mydb["notes"]
         mycollection1=mydb["tags"]
@@ -90,7 +90,7 @@ class myApp(QtWidgets.QMainWindow):
         self.ui.list_results.clear()
         
     def searchingArticle(self):
-        myclient= pymongo.MongoClient("mongodb+srv://berkguzel:yxp6x9kqwvFxAsbn@cluster0-feifa.mongodb.net/test?retryWrites=true&w=majority")
+        myclient= pymongo.MongoClient("mongo db url")
         checkedList=[]
         mydb=myclient["notes-py"]
         mycollection=mydb["notes"]
@@ -118,7 +118,7 @@ class myApp(QtWidgets.QMainWindow):
     def removeArticle(self):
 
 
-        myclient= pymongo.MongoClient("mongodb+srv://berkguzel:yxp6x9kqwvFxAsbn@cluster0-feifa.mongodb.net/test?retryWrites=true&w=majority")
+        myclient= pymongo.MongoClient("mongo db url")
         mydb=myclient["notes-py"]
         mycollection=mydb["notes"]
         mycollection1=mydb["tags"]
@@ -149,7 +149,7 @@ class myApp(QtWidgets.QMainWindow):
             del item
     
     def addArticle(self):
-        myclient= pymongo.MongoClient("mongodb+srv://berkguzel:yxp6x9kqwvFxAsbn@cluster0-feifa.mongodb.net/test?retryWrites=true&w=majority")
+        myclient= pymongo.MongoClient("mongo db url")
         mydb=myclient["notes-py"]
         mycollection=mydb["notes"]
         mycollection1=mydb["tags"]
@@ -192,7 +192,7 @@ class myApp(QtWidgets.QMainWindow):
                 item.setText(text)
 
     def loadArticles(self):
-        myclient= pymongo.MongoClient("mongodb+srv://berkguzel:yxp6x9kqwvFxAsbn@cluster0-feifa.mongodb.net/test?retryWrites=true&w=majority")
+        myclient= pymongo.MongoClient("mongo db url")
         mydb=myclient["notes-py"]
         mycollection=mydb["notes"]
         for i in mycollection.find({},{"article":1,"_id":0}):
